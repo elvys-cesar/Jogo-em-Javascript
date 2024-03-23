@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <audio class="ambient" controls autoplay>
+        <source src="scr/audioAmbient/mixkit-crickets-and-insects-in-the-wild-ambience-39.wav" type="audio/mpeg">
+    </audio>
+
+    <audio class="heathB">
+        <source src="scr/audioEfect/heartbeat-Deepbreaths.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio class="lostAre">
+        <source src="scr/audioAmbient/Lost Are We.mp3" type="audio/mpeg">
+    </audio>
+    <audio class="homen">
+        <source src="scr/audioEfect/" type="audio/mpeg">
+    </audio>
+    <audio class="medo">
+        <source src="scr/audioEfect/susto.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="jumps">
+        
+    </div>
+    <main >
+        <img class="fade" src="scr/scenes/blakc.jpg" alt="">
+
+        <button id="costa" >
+            <img id="sc" src="scr/steps_white.png" alt="">
+        </button>
+
+        <button id="frontal">
+            <img src="scr/steps_white.png" alt="">
+        </button>
+
+
+
+        <div id="screen">
+            <div id="fundo" class="f"></div>
+            <div id="curtina"></div>
+            <div class="stranger hide"></div>
+
+            <div class="interact-1" id="mao-1">
+                <img height="100%" src="scr/hand_png.png" alt="">
+            </div>
+            <div class="interact-2" id="mao-2" onclick="lanterna()">
+                <img height="100%" src="scr/latern.png" alt="">
+            </div>
+            <div class="interact-3" id="switch">
+                
+            </div>
+            <div id="frente"></div>
+            
+        </div>
+
+        <header class="computer" id="computador" >
+            <img src="scr/tasks/on_computer.png" alt="">
+
+            <div class="homeScreen">
+                <div class="filter"></div>
+
+                <button class="camerApp" onclick="opCamera()"><h4>camera</h4></button>
+                <button class="memoryCamerApp" onclick="opMemory()"><h4>memoria</h4></button>
+                <button class="emailApp"><h4>importante</h4></button>
+                <button class="serverApp"><h4>servidor</h4></button>
+
+                <div class="camera">
+                    <div class="topbar">
+                        <h3>Camera.exe</h3>
+                        <button type="button" onclick="exCamera()"></button>
+                    </div>
+                    
+                    <h3 style="color: wheat;">MEMORIA: 0 > 1024 (MB)</h3>
+
+                    <div class="record">
+
+                    </div>
+                </div>
+
+                <div class="memoria">
+                    <div class="topbar">
+                        <h3>Memory_Camera.exe</h3>
+                        <button type="button" onclick="exMemory()"></button>
+                    </div>
+                    <h3 style="color: rgb(0, 0, 0);">status do armazenamento</h3>
+
+                    <div class="memoryBar">
+                        <div class="b1"></div>  
+                        <div class="b2"></div>
+                        <div class="b3"></div>
+                        <div class="b4"></div>
+                        <div class="b5"></div>
+                    </div>
+                    <div class="servidor">
+
+                    </div>
+                    
+
+                    <button class="delete">
+                        <h2>
+                            APAGAR
+                        </h2>
+                    </button>
+                </div>
+                <div class="server"></div>
+                <div class="email"></div>
+
+                <div class="windowsbar">
+                    <button class="powerBTN" onclick="poweOff()">
+                        <img src="scr/computer/powerBTN.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        
+    </main>
+
+
+    <div id="esquerda" onmouseenter="cetaEsquerda(true)" onmouseleave="cetaEsquerda(false)"></div>
+    <div id="direita" onmouseenter="cetaDireita(true)" onmouseleave="cetaDireita(false)"></div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

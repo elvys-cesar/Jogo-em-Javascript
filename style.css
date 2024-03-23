@@ -1,0 +1,476 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+
+}
+
+* {cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur272.cur), auto !important;}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#fundo {
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 100%;
+}
+
+
+
+.interact-1 {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 5;
+    right: 450px;
+    bottom: 380px;
+    opacity: .6;
+}
+
+.interact-2 {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 40;
+    right: 376px;
+    bottom: 430px;
+    opacity: .6;
+
+}
+.interact-3 {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 40;
+    right: 560px;
+    top: 300px;
+    opacity: .6;
+}
+
+
+main div img:hover {
+    transition-duration: .2s;
+    filter: opacity(.6);
+}
+
+.fade {
+    position: absolute;
+    width: 120%;
+    z-index: 10;
+    animation: fade forwards 2s;
+}
+
+@keyframes fade {
+    0% {
+        display: flex;
+        opacity: 0;
+    }
+    90%{
+        opacity: 1;
+
+    }
+    100%{
+        opacity: 0;
+
+        display: none;
+    }
+}
+
+#frente {
+    background-color: rgba(0, 0, 0, 0.801);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.scene{
+    display: grid;
+    grid-template-columns: repeat(6, 16.6%);
+    grid-template-rows: repeat(6, 16.6%);
+}
+
+#screen {
+    position: absolute;
+    transform:scale(2.4);
+    z-index: 2;
+}
+
+button {
+
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border-radius: 50%;
+
+}
+
+button img{
+    z-index: 3;
+    position: absolute;
+    height: 50px;
+
+}
+
+.windowsbar{
+    height: 60px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+}
+
+.windowsbar buttom{
+    background-color: wheat;
+}
+
+.powerBtn {
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+}
+
+#costa {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: rotate(90deg);
+    justify-content: center;
+    align-items: center;
+}
+
+#costa {
+    display: grid;
+    grid-row: 5/5;
+    grid-column: 6/6;
+}
+
+button:hover{
+    background-color: rgb(116, 119, 119);
+}
+
+#frontal {
+    position: absolute;
+    top: 10;
+    left: 50%;
+    transform: rotate(-90deg);
+    justify-content: center;
+    align-items: center;
+}
+
+#lanterna {
+    height: 100px;
+    width: 100px;
+    z-index: 4;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+
+}
+
+#esquerda {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+#direita {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.575);
+
+}
+
+.computer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    animation-name: ligar;
+    animation-duration: .1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    justify-content: center;
+}
+
+.filter {
+    height: 100%;
+    background-image: url(scr/computer/white-noise.jpg);
+    opacity: .3;
+    z-index: 10;
+    z-index: 2;
+}
+
+.homeScreen {
+    position: absolute;
+    display: flex;
+    height: 604px;
+    width: 824px;
+    border: 40px solid rgb(201, 201, 201);
+    top: 10%;
+    background-color: aliceblue;
+    z-index: 5;
+    background-image: url(scr/computer/Abstract-Background-Vector-Illustrations-Graphics-60924449-1.jpg);
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@keyframes ligar {
+    0%{
+        scale: .2;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.homeScreen button{
+    display: flex;
+    height: 80px; 
+    width: 80px;
+    border-radius: 0%; 
+    position: absolute;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    z-index: 4;
+}
+
+.homeScreen button:hover{
+    border: 2px solid white;
+}
+
+h4 {
+    width: 100%;
+    align-self: flex-end;
+    color: whitesmoke;
+    text-shadow: 3px 1px 1px rgb(0, 0, 0);
+}
+
+.emailApp{
+    top:0px;
+    left: 0px;
+    background-image: url(scr/computer/icons/emailLogo.png);
+    background-size: 120%;
+    border: 0px solid black;
+    filter: drop-shadow(5px 3px 1px);
+    min-height: 100px;
+}
+
+.camerApp{
+    top: 100px;
+    left: 0px;
+    background-image: url(scr/computer/icons/CameraLogo.png);
+    background-size: 100%;
+    border: 0px solid black;
+    filter: drop-shadow(5px 3px 1px);
+    min-height: 100px;
+}
+
+.memoryCamerApp{
+    top:200px;
+    left: 0px;
+    background-image: url(scr/computer/icons/MemoriaDaCameralogo.png);
+    background-size: 150%;
+    border: 0px solid black;
+    filter: drop-shadow(5px 3px 1px);
+    min-height: 100px;
+
+}
+
+.serverApp{
+    top: 300px;
+    left: 0px;
+    background-image: url(scr/computer/icons/serverLogo.png);
+    background-size: 110%;
+    border: 0px solid black;
+    filter: drop-shadow(5px 3px 1px);
+    min-height: 100px;
+
+}
+
+.camera {
+    position: absolute;
+    display: block;
+    height: 80%;
+    width: 80%;
+    background-color: black;
+    border: 3px solid rgb(155, 137, 233);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.514);
+    animation: ligar .3s forwards;
+    z-index: 3;
+    
+}
+
+.topbar{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(155, 137, 233);
+}
+
+.record {
+    background-image: url(scr/tasks/camera/camera-1.png);
+    background-size: cover;
+    width: 80%;
+    height: 80%;
+    margin-left: 20px;
+}
+
+.camera button{
+    position: absolute;
+    background-color: brown;
+    height: 30px;
+    width: 30px;
+    right: 5px;
+    border-radius: 0%;
+    border: 3px solid black;
+}
+
+.camera button:hover{
+    background-color: rgb(224, 32, 32);
+}
+
+.memoria {
+    position: absolute;
+    display: none;
+    max-height: 80%;
+    width: 80%;
+    background-color: grey;
+    animation: ligar .3s forwards;
+    z-index: 3;
+}
+
+.memoria .topbar button{
+    position: absolute;
+    background-color: brown;
+    height: 30px;
+    width: 30px;
+    right: 5px;
+    border-radius: 0%;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.memoryBar {
+    z-index: 5;
+    flex-wrap: wrap;
+
+    height: 80%;
+    width: 100%;
+    background-color: rgb(119, 194, 119);
+    border: 2px solid black;
+    justify-content: center;
+}
+
+.memoryBar div{
+    display: block;
+    height: 50px;
+    width: 90%;
+    background-color: red;
+    border: 2px solid black;
+}
+
+.memoryBar .b3{
+    background-color: green;
+}
+
+.delete {
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+    position: relative;
+    right: 45%;
+    text-align: center;
+}
+
+.server {
+    display: none;
+}
+
+.email {
+    display: none;
+}
+
+#curtina {
+    display: flex;
+    background-image: url(scr/scenes/BG-2W.png);
+    position: absolute;
+    opacity: .6;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 100%;
+}
+
+.stranger {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url(scr/hide/silhueta.png);
+    left: 180px;
+    top: 250px;
+    background-size: 200px;
+    z-index: -1;
+    filter: blur(2px);
+    transition: 2s;
+}
+
+.hide {
+    opacity: 0;
+
+}
+.show {
+    opacity: 1;
+}
+
+
+@keyframes move{
+    0%{ 
+        opacity: 0.0;
+    }
+    100%{
+        opacity: 1.0;
+    }
+}
+
+
+/* ANIMAÇÃO DE MORTE*/
+.jumps {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 5;
+    top: 0px;
+}
+

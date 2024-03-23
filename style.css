@@ -29,7 +29,7 @@ div {
 
 
 .interact-1 {
-    display: flex;
+    display: none;
     height: 30px;
     width: 30px;
     position: absolute;
@@ -67,25 +67,24 @@ main div img:hover {
 }
 
 .fade {
+    display: none;
+    top: 0px;
     position: absolute;
     width: 120%;
+    height: 100%;
     z-index: 10;
-    animation: fade forwards 2s;
+    animation: fade forwards 1s;
 }
 
 @keyframes fade {
     0% {
-        display: flex;
         opacity: 0;
     }
-    90%{
+    60%{
         opacity: 1;
-
     }
     100%{
         opacity: 0;
-
-        display: none;
     }
 }
 
@@ -107,6 +106,18 @@ main div img:hover {
     position: absolute;
     transform:scale(2.4);
     z-index: 2;
+}
+
+.pm {
+    height: 50px;
+    width: 150px;
+    background-color: black;
+    z-index: 10;
+    position: absolute;
+    top: 0px;
+    color: wheat;
+    display: flex;
+    justify-content: space-around;
 }
 
 button {
@@ -175,6 +186,59 @@ button:hover{
     align-items: center;
 }
 
+.jumps {
+    display: none;
+    position: absolute;
+    top: 0px;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    z-index: 6;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.eyes {
+    display: none;
+    background-image: url(scr/hide/eyes.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 100%;
+    width: 100%;
+    animation-duration: 3s;
+    animation-name: jumpScare;
+    animation-direction: alternate;
+    background-size: 120%;
+}
+
+.despedido {
+    display: none;
+    height: 400px;
+    width: 800px;
+    color: wheat;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.win {
+    display: none;
+    height: 400px;
+    width: 800px;
+    color: wheat;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@keyframes jumpScare{
+    0%{
+        opacity: 1.0;
+    } 80%{
+        opacity: 1.0;
+    }100% {
+        opacity: 0.0;
+    }
+}
+
 #lanterna {
     height: 100px;
     width: 100px;
@@ -207,7 +271,7 @@ button:hover{
 }
 
 .computer {
-    display: flex;
+    display: none;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -323,7 +387,7 @@ h4 {
 
 .camera {
     position: absolute;
-    display: block;
+    display: none;
     height: 80%;
     width: 80%;
     background-color: black;
@@ -393,7 +457,7 @@ h4 {
     justify-content: center;
 }
 
-.memoryBar div{
+.b1{
     display: block;
     height: 50px;
     width: 90%;
@@ -401,18 +465,26 @@ h4 {
     border: 2px solid black;
 }
 
-.memoryBar .b3{
+.load {
+    height: 100%;
+    width: 100%;
     background-color: green;
+    left: 0px;
 }
 
-.delete {
+#delete {
+    display: flex;
     height: 100px;
     width: 100px;
     background-color: blueviolet;
-    position: relative;
+    position: absolute;
     right: 45%;
-    text-align: center;
+    bottom: 10px;
+    justify-content: center;
+    font-size: 20px;
+    flex-direction: column;
 }
+
 
 .server {
     display: none;
@@ -461,16 +533,3 @@ h4 {
         opacity: 1.0;
     }
 }
-
-
-/* ANIMAÇÃO DE MORTE*/
-.jumps {
-    display: none;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    z-index: 5;
-    top: 0px;
-}
-

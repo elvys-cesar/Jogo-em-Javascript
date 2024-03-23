@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 </head>
 <body>
     <audio class="ambient" controls autoplay>
-        <source src="scr/audioAmbient/mixkit-crickets-and-insects-in-the-wild-ambience-39.wav" type="audio/mpeg">
+        <source src="scr/audioAmbient/night-ambience.mp3" type="audio/mpeg">
     </audio>
 
     <audio class="heathB">
@@ -18,16 +18,51 @@
     <audio class="lostAre">
         <source src="scr/audioAmbient/Lost Are We.mp3" type="audio/mpeg">
     </audio>
+
+    <audio class="woodCreak">
+        <source src="scr/audioEfect/wood-creak-single.mp3" type="audio/mpeg">
+    </audio>
+    <audio class="doorKnocks">
+        <source src="scr/audioEfect/door-knocks-34429.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio class="steps">
+        <source src="scr/audioEfect/indoor-footsteps-6385.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="telefone">
+        <source src="scr/audioAmbient/office_phone-ring_medium-loudaif-14604.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio class="sucesso">
+        <source src="scr/audioAmbient/success-1-6297.mp3" type="audio/mpeg">
+    </audio>
+
+
+
+
     <audio class="homen">
-        <source src="scr/audioEfect/" type="audio/mpeg">
+        <source src="scr/audioEfect/homem.mp3" type="audio/mpeg">
     </audio>
     <audio class="medo">
-        <source src="scr/audioEfect/susto.mp3" type="audio/mpeg">
+        <source src="scr/audioAmbient/jumpscareas.mp3" type="audio/mpeg">
     </audio>
 
     <div class="jumps">
-        
+        <div class="eyes"></div>
+        <div class="despedido">
+            <h1>Você recebe ligação do seu superior e logo é demitido.</h1>
+            <h3>Motivo: servidor entrou em colapso ao alcançar a memoria maxima.</h3>
+        </div>
+        <div class="win">
+            <h1>Apesar dos apesares, seu primeiro dia foi um sucesso! Você recebe os parabéns do seu chefe.</h1>
+        </div>
     </div>
+
+    <div class="pm">
+        <h2 id="hora">00:00</h2>
+        <h2>PM</h2>
+    </div>
+
     <main >
         <img class="fade" src="scr/scenes/blakc.jpg" alt="">
 
@@ -66,9 +101,9 @@
                 <div class="filter"></div>
 
                 <button class="camerApp" onclick="opCamera()"><h4>camera</h4></button>
-                <button class="memoryCamerApp" onclick="opMemory()"><h4>memoria</h4></button>
+                <button class="memoryCamerApp" ><h4>memoria</h4></button>
                 <button class="emailApp"><h4>importante</h4></button>
-                <button class="serverApp"><h4>servidor</h4></button>
+                <button class="serverApp"onclick="opMemory()"><h4>servidor</h4></button>
 
                 <div class="camera">
                     <div class="topbar">
@@ -85,27 +120,28 @@
 
                 <div class="memoria">
                     <div class="topbar">
-                        <h3>Memory_Camera.exe</h3>
+                        <h3>servidor</h3>
                         <button type="button" onclick="exMemory()"></button>
                     </div>
                     <h3 style="color: rgb(0, 0, 0);">status do armazenamento</h3>
 
+                    <h2>CONSUMO: alto</h2>
+
                     <div class="memoryBar">
-                        <div class="b1"></div>  
-                        <div class="b2"></div>
-                        <div class="b3"></div>
-                        <div class="b4"></div>
-                        <div class="b5"></div>
+                        <div class="b1">
+                            <div class="load">
+
+                            </div>
+                        </div>
                     </div>
+
                     <div class="servidor">
 
                     </div>
                     
 
-                    <button class="delete">
-                        <h2>
-                            APAGAR
-                        </h2>
+                    <button id="delete">
+                        <h3>APAGAR</h3>
                     </button>
                 </div>
                 <div class="server"></div>
